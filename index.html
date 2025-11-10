@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecting DOM Elements – Labs</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0 1rem 3rem; }
+      header { padding: 1rem 0; border-bottom: 1px solid #ddd; }
+      main { max-width: 800px; margin: 1.25rem auto; }
+      .navbar a { margin-right: .75rem; }
+      .card { border: 1px solid #e5e7eb; border-radius: .5rem; padding: 1rem; margin: .75rem 0; }
+      .price { font-weight: 600; }
+      .hint { color: #6b7280; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header id="main-header">
+        <h1>My Site</h1>
+        <nav class="navbar">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="https://external.com">External</a>
+        </nav>
+      </header>
+
+      <main>
+        <form data-form-type="login">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="btn primary">Log In</button>
+          <p class="hint">Required fields should get a gold outline via JS.</p>
+        </form>
+
+        <div class="card" data-product-id="1">
+          <h3 class="card-title">Product A</h3>
+          <p class="price">$19.99</p>
+        </div>
+
+        <div class="card" data-product-id="2">
+          <h3 class="card-title">Product B</h3>
+          <p class="price">$29.99</p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
